@@ -1,0 +1,192 @@
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #c3f3ff;
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    #main-container {
+        display: grid;
+        grid-template-columns: 2fr 5fr 2fr;
+        max-height: 100vh;
+    }
+
+    #missions {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1em;
+        max-height: 100%;
+        margin: 0;
+        padding: 1em;
+    }
+
+    .mission-card {
+        font-size: .9em;
+        padding: .8em;
+        margin-top: .8em;
+        border-radius: 4px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 20px rgba(39, 35, 35, 0.5);
+        transition: transform 0.3s ease-in-out;         
+    }
+
+    .mission-card:hover {
+        transform: translateY(-1px); 
+    }
+
+    #current-season {
+        padding: .5em;
+        margin: 0;
+    }
+
+    #season-card-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .season-cards {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: 3px solid rgba(0, 0, 0, 0.1); 
+        margin: 0 .3em; 
+        padding: .4em .3em;
+        font-weight: 600;
+        border-radius: .3em;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); 
+        transition: all 0.3s ease; 
+    }
+
+    .season-cards:first-child {
+        background: #3e9018;
+    }
+
+    .season-cards:nth-child(2) {
+        background: #c1c92a;
+    }
+
+    .season-cards:nth-child(3) {
+        background: #ff9a42;
+    }
+
+    .season-cards:last-child {
+        background: #45b2ff;
+    }
+
+    #map-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #map {
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+        grid-template-rows: repeat(11, 1fr);
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        border-collapse: collapse;
+    }
+
+    #next-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 2em;
+        border-collapse: collapse;
+        max-height: 100%;
+    }
+
+    #next-element {
+        border-collapse: collapse;
+        width: 100%;
+        height: 40%;
+        margin: 1em auto auto auto;
+    }
+
+    .element-div {
+        border-collapse: collapse;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    #time-unit {
+        font-size: 1.6em;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    button {
+        width: 100%;
+        padding: 1em;
+        border: none;
+        border-radius: 5px;
+        margin-top: 1em;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        color: #fff; 
+        background-color: #3498db; 
+        transition: background-color 0.3s ease; 
+    }
+
+    button:hover {
+        background-color: #2980b9; 
+    }
+
+
+    .cell,
+    .cell-preview {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #282727;
+        border-radius: 5px;
+        cursor: pointer;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .occupied {
+        background-image: url(assets/tiles/occupied.svg) !important;
+    }
+
+    .cell-preview {
+        opacity: 0.8;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+
+    .base {
+        background-image: url(assets/tiles/base_tile.svg);
+    }
+
+    .mountain {
+        background-image: url(assets/tiles/mountain_tile.svg);
+    }
+
+    .water {
+        background-image: url(assets/tiles/water_tile.svg);
+    }
+
+    .forest {
+        background-image: url(assets/tiles/forest_tile.svg);
+    }
+
+    .town {
+        background-image: url(assets/tiles/village_tile.svg);
+    }
+
+    .farm {
+        background-image: url(assets/tiles/plains_tile.svg);
+    }
+
+
+
